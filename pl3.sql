@@ -8,7 +8,7 @@ end $
 delimeter ;
 
 */
-
+/*
 drop trigger if exists tr2
 delimeter $
 create trigger tr2 before DELETE on g for each ROW

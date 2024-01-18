@@ -1,0 +1,12 @@
+mysql --host=192.168.10.150 --port=3306 --user=dac31 --password=welcome dac31
+
+
+
+
+
+
+Server MongoDB :mongod --dbpath="C:\MongoData" --bind_ip=192.168.10.186
+
+
+
+Client MongoDB :mongosh --host=192.168.10.186 --port=27017

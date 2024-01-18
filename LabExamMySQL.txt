@@ -1,0 +1,26 @@
+230945920031
+
+
+
+Section 1
+
+Q.1 select *, monthname(hiredate) Month from emp order by monthname(hiredate);
+
+Q.2
+
+Q.3 select M.Avg 'Manager Avg',M.Max'Manager Max',M.Min'Manager Min', C.Avg'Clerk Avg',C.Max'Clerk Max',C.Min'Clerk Min' from (select floor(avg(sal))Avg, max(sal)Max, min(sal)Min from emp where job='Manager')M ,(select floor(avg(sal))Avg,max(sal)Max, min(sal)Min from emp where job='clerk')C;
+
+Q.4 select job, count(job)Count from emp group by job having Count=1;
+
+Q.5 select min(sal)'2nd Lowest Sal' from emp where sal>(select min(sal) Min from emp);
+
+Q.6 select ename, job, sal, ifnull(comm, 'No Commision') from emp;
+
+Q.7 select deptno,floor(avg(sal))'Average Sal'from emp where deptno in(select deptno from emp group by deptno having count(deptno)>3) group by deptno;
+
+Q.8 select ename, sal from emp where sal>(select sal from emp where ename= 'ADAMS');
+
+Q.9
+
+Q.10 select year(hiredate)Year, count(year(hiredate))Count from emp group by hiredate having Count=8;
+
